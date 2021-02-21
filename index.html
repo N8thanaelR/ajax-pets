@@ -6,7 +6,7 @@
    <title>AJAX Pet Starter</title>
    <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
    <script type="text/javascript">
-       $("document").ready(function(){
+    $("document").ready(function(){
 
             $("#pet_likes").hide();
             $("#pet_eats").hide();
@@ -19,7 +19,7 @@
                 $("#pet_eats").slideDown(200);
             });
 
-        $('#myForm').submit(function(e){
+            $('#myForm').submit(function(e){
 
             let feels = $("input[name=feels]:checked").val();
             let likes = $("input[name=likes]:checked").val();
