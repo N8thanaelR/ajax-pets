@@ -8,20 +8,20 @@
    <script type="text/javascript">
        $("document").ready(function(){
 
-        $("#pet_likes").hide();
-        $("#pet_eats").hide();
+            $("#pet_likes").hide();
+            $("#pet_eats").hide();
 
-        $("#pet_feels").click(function(e){
-            //alert("im click");
-            $("#pet_likes").slideDown(200);
-        });
+            $("#pet_feels").click(function(e){
+                //alert("im click");
+                $("#pet_likes").slideDown(200);
+            });
 
-        $("#pet_likes").click(function(e){
-            //alert("im click");
-            $("#pet_eats").slideDown(200);
-        });
+            $("#pet_likes").click(function(e){
+                //alert("im click");
+                $("#pet_eats").slideDown(200);
+            });
 
-        $('#myForm').submit(function(e){
+            $('#myForm').submit(function(e){
 
             let feels = $("input[name=feels]:checked").val();
             let likes = $("input[name=likes]:checked").val();
