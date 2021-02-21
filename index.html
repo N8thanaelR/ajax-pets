@@ -22,12 +22,11 @@
         });
 
         $('#myForm').submit(function(e){
-               //alert("hi!  I'm jQuery!");
 
-               let feels = $("input[name=feels]:checked").val();
-               let likes = $("input[name=likes]:checked").val();
-               let eats = $("input[name=eats]:checked").val();
-               let pet = "";
+            let feels = $("input[name=feels]:checked").val();
+            let likes = $("input[name=likes]:checked").val();
+            let eats = $("input[name=eats]:checked").val();
+            let pet = "";
                
                 if(feels=="fluffy" && likes=="petted" && eats=="carrots" ){
                         pet = "rabbit";
@@ -55,7 +54,7 @@
                e.preventDefault();//no need to submit as you'll be doing AJAX on this page
        
            });
-       });
+    });
    </script>
 </head>
 <body>
