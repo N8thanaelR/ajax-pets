@@ -12,12 +12,10 @@
             $("#pet_eats").hide();
 
             $("#pet_feels").click(function(e){
-                //alert("im click");
                 $("#pet_likes").slideDown(200);
             });
 
             $("#pet_likes").click(function(e){
-                //alert("im click");
                 $("#pet_eats").slideDown(200);
             });
 
@@ -27,31 +25,29 @@
             let likes = $("input[name=likes]:checked").val();
             let eats = $("input[name=eats]:checked").val();
             let pet = "";
-               
+                
             if(feels=="fluffy" && likes=="petted" && eats=="carrots"){
-                        pet = "rabbit";
+                pet = "rabbit";
             }
 
             if(feels=="scaly" && likes=="ridden" && eats=="pets"){
-                        pet = "velociraptor";
+                pet = "velociraptor";
             }
 
 
 
 
-               let output = "";
-               output += `<p>My pet is a: ${pet}</p>`;
-               output += `<p>My pet feels: ${feels}</p>`;
-               output += `<p>My pet likes to be: ${likes}</p>`;
-               output += `<p>My pet likes to eat: ${eat}</p>`;
-               $("#output").html(output);
+            let output = "";
+            output += `<p>My pet is a: ${pet}</p>`;
+            output += `<p>My pet feels: ${feels}</p>`;
+            output += `<p>My pet likes to be: ${likes}</p>`;
+            output += `<p>My pet likes to eat: ${eat}</p>`;
+            $("#output").html(output);
 
-               $('#pet').load(`includes/content.html #${pet}`);
+            $('#pet').load(`includes/content.html #${pet}`);
 
-
-               //alert(eats);
               
-               e.preventDefault();//no need to submit as you'll be doing AJAX on this page
+            e.preventDefault();//no need to submit as you'll be doing AJAX on this page
        
         });
     });
