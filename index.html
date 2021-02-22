@@ -8,48 +8,46 @@
    <script type="text/javascript">
     $("document").ready(function(){
 
-            $("#pet_likes").hide();
-            $("#pet_eats").hide();
+        $("#pet_likes").hide();
+        $("#pet_eats").hide();
 
-            $("#pet_feels").click(function(e){
-                $("#pet_likes").slideDown(200);
-            });
+        $("#pet_feels").click(function(e){
+            $("#pet_likes").slideDown(200);
+        });
 
-            $("#pet_likes").click(function(e){
-                $("#pet_eats").slideDown(200);
-            });
+        $("#pet_likes").click(function(e){
+            $("#pet_eats").slideDown(200);
+        });
 
             $('#myForm').submit(function(e){
 
-            let feels = $("input[name=feels]:checked").val();
-            let likes = $("input[name=likes]:checked").val();
-            let eats = $("input[name=eats]:checked").val();
-            let pet = "";
+                let feels = $("input[name=feels]:checked").val();
+                let likes = $("input[name=likes]:checked").val();
+                let eats = $("input[name=eats]:checked").val();
+                let pet = "";
+                    
+                if(feels=="fluffy" && likes=="petted" && eats=="carrots"){
+                    pet = "rabbit";
+                }
+
+                if(feels=="scaly" && likes=="ridden" && eats=="pets"){
+                    pet = "velociraptor";
+                }
+
+
+                let output = "";
+                output += `<p>My pet is a: ${pet}</p>`;
+                output += `<p>My pet feels: ${feels}</p>`;
+                output += `<p>My pet likes to be: ${likes}</p>`;
+                output += `<p>My pet likes to eat: ${eat}</p>`;
+                $("#output").html(output);
+
+                $('#pet').load(`includes/content.html #${pet}`);
+
                 
-            if(feels=="fluffy" && likes=="petted" && eats=="carrots"){
-                pet = "rabbit";
-            }
-
-            if(feels=="scaly" && likes=="ridden" && eats=="pets"){
-                pet = "velociraptor";
-            }
-
-
-
-
-            let output = "";
-            output += `<p>My pet is a: ${pet}</p>`;
-            output += `<p>My pet feels: ${feels}</p>`;
-            output += `<p>My pet likes to be: ${likes}</p>`;
-            output += `<p>My pet likes to eat: ${eat}</p>`;
-            $("#output").html(output);
-
-            $('#pet').load(`includes/content.html #${pet}`);
-
-              
-            e.preventDefault();//no need to submit as you'll be doing AJAX on this page
+                e.preventDefault();//no need to submit as you'll be doing AJAX on this page
        
-        });
+            });
     });
    </script>
 </head>
